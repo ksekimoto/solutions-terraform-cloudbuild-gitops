@@ -17,7 +17,8 @@ locals {
   network = "${element(split("-", var.subnet), 0)}"
 }
 
-# modified for a part of tutorial
+# 1. modified for a part of tutorial
+# 2. modified for a part of tutorial
 resource "google_compute_firewall" "allow-http" {
   name    = "${local.network}-allow-http"
   network = "${local.network}"
